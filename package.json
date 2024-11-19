@@ -1,0 +1,40 @@
+{
+  "type": "module",
+  "name": "ChatGPT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "build": {
+    "productName": "ChatGPT",
+    "appId": "com.chatgpt.demo",
+    "win": {
+      "icon": "res/images/chatgpt.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true
+    }
+  },
+  "keywords": [],
+  "author": "ZEL",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
