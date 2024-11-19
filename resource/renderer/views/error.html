@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Error</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffecec;
+            /* 浅红色背景表示错误 */
+            color: #333;
+            /* 深色文字 */
+            font-family: Arial, sans-serif;
+        }
+
+        .error {
+            text-align: center;
+        }
+
+        .error img {
+            width: 100px;
+            /* 图标宽度 */
+            height: 100px;
+            /* 图标高度 */
+            margin-bottom: 20px;
+        }
+
+        .error h1 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .error p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .error button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6b6b;
+            /* 按钮背景色 */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .error button:hover {
+            background-color: #e55d5d;
+            /* 按钮悬停背景色 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error">
+        <!-- 错误图标 -->
+        <img src="../resource/images/chatgpt.ico" alt="Error Icon">
+        <!-- 错误标题 -->
+        <h1>Oops! Connection Error</h1>
+        <!-- 错误提示信息 -->
+        <p>We couldn't load the page. Please check your internet connection and try again.</p>
+        <!-- 重试按钮 -->
+        <button onclick="retry()">Retry</button>
+    </div>
+
+    <script>
+        // 重试按钮逻辑，重新加载窗口
+        function retry() {
+            window.location.reload();
+        }
+    </script>
+</body>
+
+</html>
